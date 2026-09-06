@@ -1,0 +1,31 @@
+Item Name,Qty,Price (total) (GPB),Item link, Notes
+Custom PCB v2, 1, £23.49 with PCB v3 / £19.66 alone, https://cart.jlcpcb.com/quote, PCB v2 (wired)
+Custom PCB v3, 1, £23.49 with PCB v2 / £19.66 alone, https://cart.jlcpcb.com/quote, PCB v3 (wireless)
+Seeded XIAO ESP32-C3, 1, £6.73, https://www.aliexpress.com/item/1005007084388623.html, for v3 (wireless)
+Arduino Pro Micro ATmega32U4 3.3V/8MHz, 1, £5.93, https://www.aliexpress.com/item/1005007240573013.html, Must be 3.3v/8MHz / for v2 (wired)
+PMW3389 Sensor + LM19-LCT Lens, 3, £7.55, https://www.aliexpress.com/item/1005007468783392.html, -
+EC11 Rotary Encoder, 1, £0.85, https://www.aliexpress.com/item/1005007644083514.html, -
+Mill-Max 3305 Socket, 6, £3.00, https://keebd.com/en-gb/products/mill-max-socket-3305-pack-of-10, -
+Huano Blue Shell Pink Dot, 2, £2.77, https://www.aliexpress.com/item/1005004754415184.html, already purchased
+Single Row Pin Female Header Socket Pitch 2.54mm 1x12 pin, 2, £1.20, https://www.aliexpress.com/item/4001198421663.html, -
+Single Row Pin Male Header Socket Pitch 2.54mm 1x12 pin, 2, £1.37, https://www.aliexpress.com/item/1005006034877497.html, -
+13 Ω Resistor, 1, £1.25, https://www.aliexpress.com/item/1005001794062302.html, already purchased
+10 kΩ Resistor, 1, £1.25, https://www.aliexpress.com/item/1005001794062302.html, already purchased
+100 nF Capacitor, 5, £3, https://www.aliexpress.com/item/1005010243722146.html, already purchased
+10 µF Capacitor, 3, £6.02, https://www.aliexpress.com/item/1005010243722146.html, already purchased
+4.7 µF Capacitor, 1, £5.77, https://www.aliexpress.com/item/1005010243722146.html, already purchased
+XC6206-1.8V 65K5 LDO, 1, £0.95, https://www.aliexpress.com/item/1005005560879957.html, already purchased
+PTFE Mouse Skates, 10, £1.05, https://www.aliexpress.com/item/1005007319381356.html, -
+USB Micro Cable, 1, £0.91, https://www.aliexpress.com/item/1005003391567749.html, 1m / for v2 (wired)
+USB C Cable, 1, £9.59, https://www.aliexpress.com/item/1005007661508886.html, 1m / for v3 (wireless)
+M2 Hardware Kit, 1, £6.66, https://www.aliexpress.com/item/1005004837433548.html, already purchased
+3D Printing Filament, 1, £21.99, https://uk.store.bambulab.com/products/pla-tough-upgrade?id=624454208526409776, -
+JST PH2.0 PH 2.0mm Wire Cable Connector, 2, £1.09, https://www.aliexpress.com/item/1005007270514533.html, 2 pin / for v3 (wireless)
+SS12D00 Interruptor On-Off Mini Slide Switch 3pin, 1, £0.79, https://www.aliexpress.com/item/1005005633418066.html, already purchased / for v3 (wireless)
+Rechargeable LiPo Battery 503035 3.7V 500mAh, 1, £6.61, https://www.aliexpress.com/item/1005011913598940.html, for v3 (wireless)
+,,,,
+Total for Project,, £119.82,,
+Total for v2 (wired),, £,,The price for v2 and v3 do not add up to the total for the project because some components are shared between the two versions.
+Total for v3 (wireless),, £92.16,, The price for v2 and v3 do not add up to the total for the project because some components are shared between the two versions.
+Total Remaining,, £91.36,,,
+Total Already Purchased,, £28.46,,

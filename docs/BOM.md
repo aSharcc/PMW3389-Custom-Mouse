@@ -4,16 +4,16 @@
 
 |Item|Specification|
 |---|---|
-|Project|PMW3389 Custom DIY Mouse|
-|Quantity|1 Mouse|
-|PCB|Custom Designed|
-|Revision|v2|
+|**Project**|PMW3389 Custom DIY Mouse|
+|**Quantity**|1 Mouse|
+|**PCB**|Custom Designed|
+|**Revisions Supported**|v2|
 
 ## 1. PCB
 
-|Item|Quantity|Required?|Notes|
+|Item|Required?|v2 (Wired)|v3 (Wireless)|
 |---|---|---|---|
-|Custom PCB|1|Yes|Manufacture by uploading [this](https://github.com/aSharcc/PMW3389-Arduino-Custom-Mouse/releases/download/2.0/DIY_Mouse.zip) to a PCB manufacturer|
+|**PCB Gerbers**|Yes|[Gerbers v2]()|[Gerbers v3]()|
 
 This PCB can be assembled by PCB manufacturer or assembled by hand.
 
@@ -45,7 +45,7 @@ These components are intentionally excluded from PCBA and must be installed by h
 
 ## 4. Other Stuff
 
-|Item|Quantity|Notes|
+|Item|Quantity|Notes| 
 |---|---|---|
 |LM-19-LCT Lens|1|Lens for PMW3389, usually sold together|
 |PTFE Mouse Skates|5-10|Placed on bottom of mouse to allow for smooth movement|
