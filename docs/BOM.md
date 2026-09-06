@@ -39,8 +39,8 @@ This PCB can be assembled by PCB manufacturer with PCBA or assembled by hand.
 |C6-C8|3|Capacitor|10uF|0805|-|
 |C9|1|Capacitor|4.7uF|0805|-|
 |R1|1|Resistor|13 Ω|0805|-|
-|R1, R2|2|Resistor|10 kΩ|0805|-|
-|U3|XC6206-1.8V|SOT-23|XC6206-series 1.8 V LDO; equivalent parts must match the schematic's electrical and pinout requirements.|
+|R2, R3|2|Resistor|10 kΩ|0805|-|
+|U3|1|LDO Regulator|SOT-23|XC6206-series 1.8 V LDO; equivalent parts must match the schematic's electrical and pinout requirements.|
 
 ## 3. Through Hole Components (Not in PCBA)
 
@@ -50,23 +50,24 @@ These components are intentionally excluded from PCBA and must be installed by h
 
 |Item|Quantity|Notes|
 |---|---|---|
-|Seeed Studio XIAO ESP32-C3|1|Wireless Microcontroller for mouse|
+|Arduino Pro Micro ATmega32U4 3.3V/8MHz|1|**MUST BE 3.3V/8MHz** Microcontroller for mouse|
 |PMW3389|1|Mouse sensor|
 |EC11|1|**Should be 15mm and "Plum Handle".**Rotary encoder (Scroll Wheel)|
 |Mill-Max 3305 socket|6|Allows for Hot-Swappable switches|
 |Huano Blue Shell Pink Dot|2|Mouse switches (Buttons)|
-|12-Pin Male Pin Header, 2.54mm Pitch, 1×12|2|Should come with Pro Micro, check when purchasing|
+|12-Pin Male Pin Header, 2.54mm Pitch, 1×12|2|Should come with Microcontroller, check when purchasing|
 |12-Pin Female Pin Header, 2.54mm Pitch, 1×12|2|Allows for replaceable Microcontroller|
 
 ### v3
 
-|Arduino Pro Micro ATmega32U4 3.3V/8MHz|1|**MUST BE 3.3V/8MHz** Microcontroller for mouse|
+|Item|Quantity|Notes|
 |---|---|---|
+|Seeed Studio XIAO ESP32-C3|1|Wireless Microcontroller for mouse|
 |PMW3389|1|Mouse sensor|
 |EC11|1|**Should be 15mm and "Plum Handle".** Rotary encoder (Scroll Wheel)|
 |Mill-Max 3305 socket|6|Allows for Hot-Swappable switches|
 |Huano Blue Shell Pink Dot|2|Mouse switches (Buttons)|
-|12-Pin Male Pin Header, 2.54mm Pitch, 1×7|2|Should come with Seeded XIAO, check when purchasing|
+|12-Pin Male Pin Header, 2.54mm Pitch, 1×7|2|Should come with Microcontroller, check when purchasing|
 |12-Pin Female Pin Header, 2.54mm Pitch, 1×7|2|Allows for replaceable Microcontroller|
 
 ## 4. Other Stuff
@@ -76,8 +77,9 @@ These components are intentionally excluded from PCBA and must be installed by h
 |Item|Quantity|Notes| 
 |---|---|---|
 |LM-19-LCT Lens|1|Lens for PMW3389, usually sold together|
-|PTFE Mouse Skates|5-10|Placed on bottom of mouse to allow for smooth movement|
+|PTFE Mouse Skate Dots|5-10|Placed on bottom of mouse to allow for smooth movement|
 |USB Cable|1|Get 1m+ / **USB micro for v2 / USB C for v3**|
+
 
 ## 5. 3D Printed Parts
 
