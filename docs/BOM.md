@@ -1,5 +1,7 @@
 # PMW3389 Custom DIY Mouse - Bill of Materials
 
+**Shop links to components in [BOM.csv](../BOM.csv)**
+
 ## Build information
 
 |Item|Specification|
