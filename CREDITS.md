@@ -23,6 +23,8 @@ reference, comparison, and component integration.
 
 * **Arduino Pro Micro Footprint:** [SnapEDA / SparkFun DEV-12587](https://www.snapeda.com/parts/DEV-12587/SparkFun%20Electronics/view-part/)
 
+* **Seeed Studio XIAO ESP32C3:** [SnapEDA / XIAO ESP32C3](https://www.snapeda.com/parts/XIAO%20ESP32C3/Seeed%20Studio/view-part/)
+
 * **Mouse Switch Footprint:** [SnapEDA / Omron D2FC-F-7N(100M)](https://www.snapeda.com/parts/D2FC-F-7N(100M)/Omron/view-part/)
 
 * **Other Components:** KiCad built-in libraries — [KiCad](https://www.kicad.org/).
