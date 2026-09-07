@@ -128,7 +128,7 @@ The components in **Section 3: Through Hole Components** must still be purchased
     - [Scroll Knob](#5-3d-printed-parts)
 - Insert heat inserts into the holes on the top and bottom shell
 
-### v2 Firmware
+### v2 Firmware 
 
 You can use either Arduino IDE or VS Code with PlatformIO extension
 
