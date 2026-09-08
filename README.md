@@ -59,9 +59,9 @@ Be sure to read [BOM.md](docs/BOM.md)
 
 - MCU: 3.3V/8MHz Arduino Pro Micro (ATmega32U4) or Seeed Studio XIAO ESP32C3
 
-- Switches: 2 x Huano Blue Shell Pink Dot Mouse Switches 
-
-- Scroll Wheel: Rotary Encoder w/Switch (EC11)
+- Switches: 2 x Huano Blue Shell Pink Dot Mouse Switches  
+ 
+- Scroll Wheel: Rotary Encoder w/Switch (EC11) 
 
 - Hot Swap Socket for Switches: 6 x Mill-Max 3305
 
