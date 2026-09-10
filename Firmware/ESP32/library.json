@@ -1,0 +1,9 @@
+{
+  "name": "PMW3389",
+  "version": "1.0.0",
+  "description": "Driver for the PixArt PMW3389 optical mouse sensor",
+  "keywords": ["sensor", "spi", "mouse", "pmw3389", "optical", "motion", "firmware", "srom"],
+  "authors": [{ "name": "sharc !!", "maintainer" : true}],
+  "frameworks": "arduino",
+  "platforms": "*"
+}
