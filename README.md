@@ -39,8 +39,8 @@ Be sure to read [BOM.md](docs/BOM.md)
 3. Purchase the components listed in the BOM that are not included in PCBA.
 4. Hand solder/install the components not included in PCBA.
 5. Download the PMW3389 library.
-	- For Wired: [Arduino Library](Firmware/Arduino/README.md) for instructions.
-	- For Wireless: **NOT COMPLETED**
+	- For Wired: [Arduino PMW3389 Library](Firmware/Arduino/README.md) for instructions.
+	- For Wireless: [ESP32 PMW3389 Library](Firmware/ESP32/README.md) for instructions.
 6. Download Firmware
 	- For Wired: [Arduino Firmware](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/2.0/Mouse.Firmware.ino)
 	- For Wireless: **NOT COMPLETED**
