@@ -1,9 +1,10 @@
 # PMW3389 Library
 
-PMW3389 driver library for ATmega32u4 based boards. e.g. Sparkfun Pro Micro
+PMW3389 driver library for ESP32 (e.g. Seeed XIAO ESP32-C3)
 
 ## Features
 
+- Custom SPI pin mapping
 - Register Read and Write
 - SROM firmware upload
 - Motion Burst Reads (dx, dy, motion flag, SQUAL)
@@ -20,7 +21,7 @@ PMW3389 driver library for ATmega32u4 based boards. e.g. Sparkfun Pro Micro
 
 ## Installation
 
-**PlatformIO** - Copy this folder into your project's 'lib/' folder
+**PlatformIO** - Copy this folder into your project's 'lib/' folder or place in 'lib_extra_dirs'.
 
 **ArduinoIDE** - Copy this folder into your sketchbook's 'libraries/' directory (usually 'Documents/Arduino/libraries/'), then restart the IDE.
 
@@ -33,23 +34,28 @@ PMW3389 driver library for ATmega32u4 based boards. e.g. Sparkfun Pro Micro
 
 | Method | Description |
 |---|---|
-| `PMW3389(uint8_t ncsPin)` | Constructor. Sets which pin is used for chip select. |
-| `bool begin()` | Initializes SPI, resets the sensor, uploads SROM firmware. Returns `true` if Product_ID verification passes. |
-| `uint8_t readRegister(uint8_t regAddr)` | Reads a single register. |
-| `void writeRegister(uint8_t regAddr, uint8_t value)` | Writes a single register. |
-| `PMW3389_Motion readMotion()` | Performs a burst read. Returns a struct with `isMotion`, `dx`, `dy`, `squal`. |
-| `void setDPI(uint16_t dpi)` | Sets sensor resolution. Clamped to 100–16000, rounded down to the nearest 50. |
-| `uint16_t getDPI()` | Reads back the currently set DPI. |
+| PMW3389(uint8_t ncsPin) | Constructor. Sets which pin is used for chip select. |
+| bool begin(int8_t sck, int8_t miso, int8_t mosi) | Initializes SPI, resets the sensor, uploads SROM firmware. Returns true if Product_ID verification passes. |
+| uint8_t readRegister(uint8_t regAddr) | Reads a single register. |
+| void writeRegister(uint8_t regAddr, uint8_t value) | Writes a single register. |
+| PMW3389_Motion readMotion() | Performs a burst read. Returns a struct with isMotion, dx, dy, squal. |
+| void setDPI(uint16_t dpi) | Sets sensor resolution. Clamped to 100–16000, rounded down to the nearest 50. |
+| uint16_t getDPI() | Reads back the currently set DPI. |
 
 ## Usage
 
 ``` cpp
 #include <PMW3389.h>
 
-PMW3389 sensor(10); // NCS on pin 10
+#define SPI_SCK  8
+#define SPI_MISO 9
+#define SPI_MOSI 10
+#define NCS_PIN  3
+
+PMW3389 sensor(NCS_PIN);
 
 void setup() {
-    if (!sensor.begin()) {
+    if (!sensor.begin(SPI_SCK, SPI_MISO, SPI_MOSI)) {
         // SROM upload or Product_ID check failed
         while (1);
     }
