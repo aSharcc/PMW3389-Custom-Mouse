@@ -179,4 +179,14 @@
 
 - Create shell v3
 - Order PCB for v2 (wired) and v3 (wireless)
-- Test v2 hardware
+- Test v3 hardware
+
+# 13/09/2026
+
+- Started Shell v3
+
+## Next Steps
+
+- Finish shell v3
+- Order PCB for v2 (wired) and v3 (wireless) **(Waiting for funding)**
+- Test v3 hardware
