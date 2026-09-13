@@ -169,3 +169,14 @@
 - Center sensor on PCB v3
 - Create shell v3
 - Order PCB for v2 (wired) and v3 (wireless)
+
+## 03/09/2026 to 12/09/2026
+
+- Updated v3 PCB
+- Exported 3d model for pcb v3
+
+### Next Steps
+
+- Create shell v3
+- Order PCB for v2 (wired) and v3 (wireless)
+- Test v2 hardware
