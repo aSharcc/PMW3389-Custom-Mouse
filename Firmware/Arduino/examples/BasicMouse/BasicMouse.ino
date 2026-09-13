@@ -2,11 +2,13 @@
 #include <Mouse.h> // Include the header file for the Arduino Mouse library
 
 #define NCS_PIN 10 // Define the chip select pin for the PMW3389 sensor
+
 #define LC_PIN 4 // Define the pin for the mouse button
 #define RC_PIN 9 // Define the pin for the mouse button
 #define MC_PIN 8 // Define the pin for the mouse button
 #define Rot_A_PIN 3 // Define the pin for the rotary encoder
 #define Rot_B_PIN 7 // Define the pin for the rotary encoder
+
 #define DEBOUNCE_DELAY 5 // Define the debounce delay for button presses in milliseconds
 
 PMW3389 sensor(NCS_PIN); // Create an instance of the PMW3389 class with chip select pin 10
