@@ -1,4 +1,4 @@
-![mouse showcase](docs\assets\Showcase 1.mp4)
+![Mouse showcase](docs\assets\Showcase_1.mp4)
 
 # PMW3389 Custom DIY Mouse
 
