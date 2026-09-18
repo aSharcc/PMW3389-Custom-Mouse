@@ -34,3 +34,9 @@ Hardware/v3 (wireless)/production
 *.gtl
 *.gbrjob
 *.zip
+
+# KiCad restore backups
+**/_restore_backup_*/
+
+# Slicer G-code variants
+*.gcode.3mf
