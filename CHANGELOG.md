@@ -190,3 +190,16 @@
 - Finish shell v3
 - Order PCB for v2 (wired) and v3 (wireless) **(Waiting for funding)**
 - Test v3 hardware
+
+# 14/09/2026 to 18/09/2026
+
+- Completed Shell v3
+- Exported Shell v3 files
+- Created 3d Printing files for v3
+
+## Next Steps
+
+- Test and prototype v3 hardware
+- Order PCB for v2 (wired) and v3 (wireless) **(Waiting for funding)**
+- Solder components for v2 and v3
+- Assemble mouse v2 and v3
