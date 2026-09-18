@@ -26,7 +26,7 @@ PMW3389 driver library for ESP32 (e.g. Seeed XIAO ESP32-C3)
 **ArduinoIDE** - Copy this folder into your sketchbook's 'libraries/' directory (usually 'Documents/Arduino/libraries/'), then restart the IDE.
 
 **OR**
-- Download [Library Zip File](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/2.0/Library.zip)
+- Download [Library Zip File](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/3.0/Firmware.zip)
 - Go to ArduinoIDE
 - Sketch->include Library->Add .ZIP Library...->Select downloaded .ZIP file
 

@@ -1,4 +1,4 @@
-https://github.com/user-attachments/assets/145927b7-b68a-468a-8b0a-571980a8af83
+![mouse showcase](docs\assets\Showcase 1.mp4)
 
 # PMW3389 Custom DIY Mouse
 
@@ -43,11 +43,11 @@ Be sure to read [BOM.md](docs/BOM.md)
 	- For Wireless: [ESP32 PMW3389 Library](Firmware/ESP32/README.md) for instructions.
 6. Download Firmware
 	- For Wired: [Arduino Firmware](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/2.0/Mouse.Firmware.ino)
-	- For Wireless: **NOT COMPLETED**
+	- For Wireless: [ESP32 Firmware](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/3.0/BasicMouse.ino)
 7. Flash the firmware to the MCU.
 8. Download and print the 3D models.
 	- For Wired: [Top](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/2.0/Mouse.Shell.top.gcode.3mf) + [Bottom](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/2.0/Mouse.Shell.bottom.gcode.3mf) + [Scroll](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/2.0/Mouse.Shell.knob.gcode.3mf)
-	- For Wireless: **NOT COMPLETED**
+	- For Wireless: [Top](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/3.0/Mouse.Shell.v3.top.gcode.3mf) + [Bottom](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/3.0/Mouse.Shell.v3.bottom.gcode.3mf) + [Scroll](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/download/3.0/Mouse.Shell.v3.knob.gcode.3mf)
 9. Add threaded heat inserts to the shell.
 10. **For Wireless Only**:
 	- **Not Completed** Will include power switch and battery stuff.
