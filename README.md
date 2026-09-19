@@ -1,4 +1,4 @@
-![Mouse showcase](docs/assets/Showcase_1.mp4)
+https://github.com/user-attachments/assets/145927b7-b68a-468a-8b0a-571980a8af83
 
 # PMW3389 Custom DIY Mouse
 
@@ -27,6 +27,12 @@ Be sure to read [BOM.md](docs/BOM.md)
 |Connectivity|Micro-USB|Bluetooth / 2.4GHz Wireless|
 |Power Source|Micro-USB|LiPo Battery|
 |Production Files|[Files v2](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/tag/2.0)|[Files v3](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/tag/3.0)|
+### v2
+![Mouse v2 shell](docs\assets\mouse_v2_full_shell.png)
+![Mouse v2 pcb render]()
+### v3
+![Mouse v3 shell](docs\assets\mouse_v3_full_shell.png)
+![Mouse v3 pcb render](docs\assets\mouse_v3_pcb_render.png)
 
 ## How To Use
 
@@ -85,6 +91,7 @@ Be sure to read [BOM.md](docs/BOM.md)
 - **FOR V3 ONLY**:
 	- 500mAh battery with JST connector
 	- SPDT / 1P2T PCB slide switch
+	- 10cm male to female USB-C cable	
 
 ## Pinout
 
