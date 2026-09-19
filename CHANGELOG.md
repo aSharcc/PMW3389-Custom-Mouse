@@ -196,6 +196,8 @@
 - Completed Shell v3
 - Exported Shell v3 files
 - Created 3d Printing files for v3
+- Updated README
+- Cleaned up repo (deleted files and updated gitignore)
 
 ## Next Steps
 
@@ -203,3 +205,27 @@
 - Order PCB for v2 (wired) and v3 (wireless) **(Waiting for funding)**
 - Solder components for v2 and v3
 - Assemble mouse v2 and v3
+
+# 19/09/2026
+
+- Iterated shell v3, created usb cutout
+- Exported new files
+- Started printing shell v3
+
+## Next Steps
+
+- Finish 3d printing shell v3
+- Test and prototype v3 hardware
+- Order PCB for v2 (wired) and v3 (wireless) **(Waiting for funding)**
+- Solder components for v2 and v3
+- Assemble mouse v2 and v3
+- Add images to readme
+- Create showcase video
+
+## 20/09/2026
+
+- Finished 3d printing files
+
+## Next Steps
+
+- 
