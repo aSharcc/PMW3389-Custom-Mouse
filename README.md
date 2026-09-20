@@ -28,10 +28,12 @@ Be sure to read [BOM.md](docs/BOM.md)
 |Power Source|Micro-USB|LiPo Battery|
 |Production Files|[Files v2](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/tag/2.0)|[Files v3](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/tag/3.0)|
 ### v2
+
 <picture>
-	<img src="docs/assets/mouse_v2_full_shell.png" media="(width = 100px)">
+	<img src="docs/assets/mouse_v2_full_shell.png" media="(width = 10px)">
 </picture>
-![Mouse v2 pcb render]()
+
+![Mouse v2 pcb render](a)
 ### v3
 ![Mouse v3 shell](docs/assets/mouse_v3_full_shell.png)
 ![Mouse v3 pcb render](docs/assets/mouse_v3_pcb_render.png)
