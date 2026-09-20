@@ -19,9 +19,9 @@ struct PMW3389_Motion { // Structure to hold motion data from the PMW3389 sensor
     uint8_t squal;
 };
 
-class PMW3389 {
+class PMW3389_AVR {
     public:
-        PMW3389(uint8_t ncsPin);
+        PMW3389_AVR(uint8_t ncsPin);
         bool begin();
         bool uploadSROM();
         uint8_t readRegister(uint8_t regAddr);

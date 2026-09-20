@@ -44,7 +44,10 @@
         digitalWrite(_ncsPin, HIGH); // Set the chip select pin high to stop communication with the PMW3389 sensor
         SPI.endTransaction(); // End the SPI transaction
         delayMicroseconds(200); // Wait for 200 microseconds to allow the PMW3389 sensor to process the request
-        readRegister(0x2A); // Read the SROM_ID register to verify that the SROM upload was successful
+        uint8_t sromId = readRegister(0x2A); // Read the SROM_ID register to verify that the SROM upload was successful
+        if (sromId == 0) { // Check if the SROM_ID register value is equal to 0, which indicates that the SROM upload was unsuccessful
+            return false; // Return false if the SROM upload was unsuccessful
+        }
         if (readRegister(0x00) != 0x47) // Read the product ID register to verify that the PMW3389 sensor is responding correctly
             return false; // Return false if the product ID is not correct
         writeRegister(0x10, 0x00); // Write 0x00 to the config2 register to set the PMW3389 sensor to normal operation mode

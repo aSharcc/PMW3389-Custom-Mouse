@@ -1,8 +1,7 @@
-#include <PMW3389.h> // Include the header file for the PMW3389 class
-#include <USB.h> // Include the header file for the Arduino Mouse library
-#include <USBHIDMouse.h> // Include the header file for the Arduino Mouse library
+#include <PMW3389_ESP32.h> // Include the header file for the PMW3389 class
+#include <BleMouse.h> // Include the header file for the Mouse library
 
-USBHIDMouse Mouse; // Create an instance of the Arduino Mouse library
+BleMouse Mouse("blootoof dewice is redy to pear", "sharc !!", 100); // Create an instance of the Mouse class
 
 #define NCS_PIN 3 // Define the chip select pin for the PMW3389 sensor
 #define SCK_PIN 8 // Define the clock pin for the PMW3389 sensor
@@ -17,7 +16,7 @@ USBHIDMouse Mouse; // Create an instance of the Arduino Mouse library
 
 #define DEBOUNCE_DELAY 5 // Define the debounce delay for button presses in milliseconds
 
-PMW3389 sensor(NCS_PIN); // Create an instance of the PMW3389 class with chip select pin 10
+PMW3389_ESP32 sensor(NCS_PIN); // Create an instance of the PMW3389_ESP32 class with chip select pin 10
 
 struct ButtonState {
   uint8_t pin; // Pin number for the button
@@ -45,42 +44,42 @@ void setup() {
   pinMode(MC_PIN, INPUT_PULLUP); // Set pin 7 as an input with an internal pull-up resistor
   pinMode(Rot_A_PIN, INPUT_PULLUP); // Set pin 6 as an input with an internal pull-up resistor
   pinMode(Rot_B_PIN, INPUT_PULLUP); // Set pin 0 as an input with an internal pull-up resistor
-  Serial.begin(9600); // Initialize serial communication at 9600 baud rate
+  Serial.begin(115200); // Initialize serial communication at 115200 baud rate
   if (!sensor.begin(SCK_PIN, MISO_PIN, MOSI_PIN)) { // Initialize the PMW3389 sensor and check if it was successful
     while(1); // Stop execution if sensor initialization fails
   }
-  Mouse.begin(); // Initialize the Arduino Mouse library
-  USB.begin(); // Initialize the USB library
 
   sensor.setDPI(800); // Set the DPI of the PMW3389 sensor to 800
   attachInterrupt(digitalPinToInterrupt(Rot_A_PIN), encoderISR, CHANGE); // Attach an interrupt to the rotary encoder pin A
+
+  Mouse.begin(); // Initialize the Arduino Mouse library
 }
 
 void loop() {
-  PMW3389_Motion motion = sensor.readMotion(); // Read motion data from the PMW3389 sensor
-  if (motion.isMotion) { // Check if motion was detected
-    sendMouseMovement(motion.dx, motion.dy); // Send mouse movement based on the motion data
+  if (Mouse.isConnected()) { // Check if the mouse is connected
+    PMW3389_Motion motion = sensor.readMotion(); // Read motion data from the PMW3389 sensor
+    if (motion.isMotion) { // Check if motion was detected
+      sendMouseMovement(motion.dx, motion.dy); // Send mouse movement based on the motion data
+    }
+    updateButton(buttons[0], MOUSE_LEFT); // Update the state of the left click button
+    updateButton(buttons[1], MOUSE_MIDDLE); // Update the state of the middle click button
+    updateButton(buttons[2], MOUSE_RIGHT); // Update the state of the right click button
+    noInterrupts();
+    int8_t scrollAmount = scroll;
+    scroll = 0;
+    interrupts();
+    if (scrollAmount != 0) {
+      Mouse.move(0, 0, scrollAmount);
+    }
   }
-  updateButton(buttons[0], MOUSE_LEFT); // Update the state of the left click button
-  updateButton(buttons[1], MOUSE_MIDDLE); // Update the state of the middle click button
-  updateButton(buttons[2], MOUSE_RIGHT); // Update the state of the right click button
-  noInterrupts();
-  int8_t scrollAmount = scroll;
-  scroll = 0;
-  interrupts();
-  if (scrollAmount != 0) {
-    Mouse.move(0, 0, scrollAmount);
-}
 }
 
 void sendMouseMovement(int16_t dx, int16_t dy) {
-  while (dx != 0 || dy != 0) { // Continue sending mouse movement until both dx and dy are zero
-    int8_t moveX = constrain(dx, -127, 127); // Constrain dx to the range of -127 to 127
-    int8_t moveY = constrain(dy, -127, 127); // Constrain dy to the range of -127 to 127
-    Mouse.move(moveX, moveY); // Move the mouse by the constrained values
-    dx -= moveX; // Decrease dx by the amount moved
-    dy -= moveY; // Decrease dy by the amount moved
-  }
+  int8_t moveX = constrain(dx, -127, 127); // Constrain dx to the range of -127 to 127
+  int8_t moveY = constrain(dy, -127, 127); // Constrain dy to the range of -127 to 127
+  Mouse.move(moveX, moveY); // Move the mouse by the constrained values
+  dx -= moveX; // Decrease dx by the amount moved
+  dy -= moveY; // Decrease dy by the amount moved
 }
 
 void updateButton(ButtonState &button, uint8_t mouseButton) {

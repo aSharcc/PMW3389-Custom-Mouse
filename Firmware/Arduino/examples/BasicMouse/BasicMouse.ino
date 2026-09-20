@@ -1,4 +1,4 @@
-#include <PMW3389.h> // Include the header file for the PMW3389 class
+#include <PMW3389_AVR.h> // Include the header file for the PMW3389 class
 #include <Mouse.h> // Include the header file for the Arduino Mouse library
 
 #define NCS_PIN 10 // Define the chip select pin for the PMW3389 sensor
@@ -11,7 +11,7 @@
 
 #define DEBOUNCE_DELAY 5 // Define the debounce delay for button presses in milliseconds
 
-PMW3389 sensor(NCS_PIN); // Create an instance of the PMW3389 class with chip select pin 10
+PMW3389_AVR sensor(NCS_PIN); // Create an instance of the PMW3389_AVR class with chip select pin 10
 
 struct ButtonState {
   uint8_t pin; // Pin number for the button

@@ -19,9 +19,9 @@ struct PMW3389_Motion { // Structure to hold motion data from the PMW3389 sensor
     uint8_t squal;
 };
 
-class PMW3389 {
+class PMW3389_ESP32 {
     public:
-        PMW3389(uint8_t ncsPin);
+        PMW3389_ESP32(uint8_t ncsPin);
 
         bool begin(int8_t sckPin, int8_t misoPin, int8_t mosiPin);
         
