@@ -1,11 +1,11 @@
-    #include "PMW3389.h" // Include the header file for the PMW3389 class 
+    #include "PMW3389_AVR.h" // Include the header file for the PMW3389 class 
     #include "utility/PMW3389_Srom.h" // Include the header file for the PMW3389 SROM data
 
-    PMW3389::PMW3389(uint8_t ncsPin) {
+    PMW3389_AVR::PMW3389_AVR(uint8_t ncsPin) {
         _ncsPin = ncsPin; // Defines the private chip select pin for the PMW3389 sensor
     }
 
-    bool PMW3389::begin() {
+    bool PMW3389_AVR::begin() {
         pinMode(_ncsPin, OUTPUT); // Set the chip select pin as an output on arduino
         digitalWrite(_ncsPin, HIGH); // Set the chip select pin high to stop communication with the PMW3389 sensor
         SPI.begin(); // Initialize the SPI library
@@ -20,7 +20,7 @@
         return uploadSROM(); // Call the uploadSROM function to upload the SROM data to the PMW3389 sensor
     }
 
-    bool PMW3389::uploadSROM() {
+    bool PMW3389_AVR::uploadSROM() {
         writeRegister(0x10, 0x20); // Disables rest mode
         writeRegister(0x3A, 0x5A); // Resets the PMW3389 sensor
         delay(50); // Wait for 50 milliseconds for chip to reboot
@@ -51,7 +51,7 @@
         return true; // Return true if the SROM upload was successful and the product ID is correct
     }
 
-    uint8_t PMW3389::readRegister(uint8_t regAddr) {
+    uint8_t PMW3389_AVR::readRegister(uint8_t regAddr) {
         SPI.beginTransaction(SPISettings(2000000, MSBFIRST, SPI_MODE3)); // Start an SPI transaction with a clock speed of 2 MHz, MSB first, and SPI mode 3
         digitalWrite(_ncsPin, LOW); // Set the chip select pin low to start communication with the PMW3389 sensor
         SPI.transfer(regAddr & 0x7F); // Send the register address to read from, with the MSB set to 0 to indicate a read operation
@@ -63,7 +63,7 @@
         return data; // Return the data read from the PMW3389 sensor
     }
 
-    void PMW3389::writeRegister(uint8_t regAddr, uint8_t value) {
+    void PMW3389_AVR::writeRegister(uint8_t regAddr, uint8_t value) {
         SPI.beginTransaction(SPISettings(2000000, MSBFIRST, SPI_MODE3)); // Start an SPI transaction with a clock speed of 2 MHz, MSB first, and SPI mode 3
         digitalWrite(_ncsPin, LOW); // Set the chip select pin low to start communication with the PMW3389 sensor
         SPI.transfer(regAddr | 0x80); // Send the register address to write to, with the MSB set to 1 to indicate a write operation
@@ -73,7 +73,7 @@
         delayMicroseconds(180); // 
     }
 
-    PMW3389_Motion PMW3389::readMotion() {
+    PMW3389_Motion PMW3389_AVR::readMotion() {
         PMW3389_Motion result; // Create a PMW3389_Motion struct to hold the motion data
         if (!_inBurst || (millis() - _lastBurstTime > 500)) {
             _inBurst = true; // Set the _inBurst flag to true to indicate that a burst read is in progress
@@ -104,7 +104,7 @@
         return result; // Return the motion data as a PMW3389_Motion struct
     }
 
-    void PMW3389::setDPI(uint16_t dpi) {
+    void PMW3389_AVR::setDPI(uint16_t dpi) {
         dpi = constrain(dpi, 100, 16000); // Constrain the DPI value to be between 100 and 16000
         dpi = dpi - (dpi % 50); // Round the DPI value down to the nearest multiple of 50
         uint16_t raw = dpi / 50;
@@ -112,7 +112,7 @@
         writeRegister(0x0F, raw >> 8); // Write the high byte of the raw DPI value to the CPI register of the PMW3389 sensor
     }
 
-    uint16_t PMW3389::getDPI() {
+    uint16_t PMW3389_AVR::getDPI() {
         uint8_t low = readRegister(0x0E); // Read the CPI register value from the PMW3389 sensor
         uint8_t high = readRegister(0x0F); // Read the high byte of the CPI register value from the PMW3389 sensor
         uint16_t raw = (uint16_t)(high << 8) | low; // Combine the high and low bytes of the CPI register value into a single 16-bit integer

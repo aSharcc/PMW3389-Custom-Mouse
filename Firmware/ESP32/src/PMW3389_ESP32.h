@@ -1,5 +1,5 @@
-#ifndef PMW3389_H
-#define PMW3389_H
+#ifndef PMW3389_ESP32_H
+#define PMW3389_ESP32_H
 
 #include <Arduino.h>
 #include <SPI.h>
