@@ -29,6 +29,9 @@ Be sure to read [BOM.md](docs/BOM.md)
 |Production Files|[Files v2](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/tag/2.0)|[Files v3](https://github.com/aSharcc/PMW3389-Custom-Mouse/releases/tag/3.0)|
 ### v2
 ![Mouse v2 shell](docs/assets/mouse_v2_full_shell.png)
+<picture>
+	<img src="docs/assets/mouse_v2_full_shell.png">
+</picture>
 ![Mouse v2 pcb render]()
 ### v3
 ![Mouse v3 shell](docs/assets/mouse_v3_full_shell.png)
