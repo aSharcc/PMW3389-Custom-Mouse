@@ -224,8 +224,16 @@
 
 ## 20/09/2026
 
-- Finished 3d printing files
+- Finished 3d printing shell v3
+- Iterated top shell, thickened shell, increased usb cutout
+
+- Assembled shell for mouse v2 and v3
+- Tested shell
+- Tested and prototyped v3 hardware
+- Added images to readme
 
 ## Next Steps
 
-- 
+- Order PCB for v2 (wired) and v3 (wireless) **(Waiting for funding)**
+- Solder components for v2 and v3
+- Create showcase video
