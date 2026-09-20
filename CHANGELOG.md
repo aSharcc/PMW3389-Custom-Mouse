@@ -226,10 +226,10 @@
 
 - Finished 3d printing shell v3
 - Iterated top shell, thickened shell, increased usb cutout
+- Tested and prototyped v3 hardware
 
 - Assembled shell for mouse v2 and v3
 - Tested shell
-- Tested and prototyped v3 hardware
 - Added images to readme
 
 ## Next Steps
