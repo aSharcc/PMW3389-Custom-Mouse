@@ -94,7 +94,7 @@ void loop() {
     if (scrollAmount != 0) {
       Mouse.move(0, 0, scrollAmount);
     }
-    delay(1);
+    // Removed delay(1) to maximize polling frequency and eliminate input lag
   } else {
     delay(10);
   }
