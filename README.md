@@ -33,7 +33,7 @@ Be sure to read [BOM.md](docs/BOM.md)
 	<img src="docs/assets/mouse_v2_full_shell.png" media="(width = 10px)">
 </picture>
 
-![Mouse v2 pcb render](a)
+![Mouse v2 pcb render](docs/assets/mouse_v2_pcb_render.png)
 ### v3
 ![Mouse v3 shell](docs/assets/mouse_v3_full_shell.png)
 ![Mouse v3 pcb render](docs/assets/mouse_v3_pcb_render.png)
