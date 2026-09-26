@@ -40,3 +40,5 @@ Hardware/v3 (wireless)/production
 
 # Slicer G-code variants
 *.gcode.3mf
+
+!Production

@@ -45,7 +45,7 @@ Be sure to read [BOM.md](docs/BOM.md)
 1. Order the PCB from a PCB manufacturer (e.g. JLCPCB) with files from specific release.
 2. Either:
    - Order PCBA for the SMD components, or
-   - Purchase the SMD components and hand solder them.
+   - Purchase the SMD components and hand solder them. 
 3. Purchase the components listed in the BOM that are not included in PCBA.
 4. Hand solder/install the components not included in PCBA.
 5. Download the PMW3389 library.
@@ -67,7 +67,7 @@ Be sure to read [BOM.md](docs/BOM.md)
 
 - Sensor: PixArt PMW3389 and LM19-LCT Lens
 
-- MCU: 3.3V/8MHz Arduino Pro Micro (ATmega32U4) or Seeed Studio XIAO ESP32C3
+- MCU: 3.3V/8MHz Arduino Pro Micro (ATmega32U4) or Seeed Studio XIAO ESP32C3 
 
 - Switches: 2 x Huano Blue Shell Pink Dot Mouse Switches  
  
