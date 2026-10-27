@@ -10,6 +10,13 @@ I also intend for this mouse to be easily repairable.
 
 Be sure to read [BOM.md](docs/BOM.md)
 
+### Thanks to PCBWay for collaborating on this project
+- Provided PCBs for v2 and v3 prototyping
+- High quality
+- Manufactured and shipped quickly
+- No faults
+- Fast reviewing
+
 ## Key Features
 
 - High performance sensor: 16,000 DPI via PixArt PMW3389
